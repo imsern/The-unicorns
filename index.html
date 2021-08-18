@@ -4,13 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>threeXthree</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <title>Team3</title>
+    <script src="script.js"></script>
 </head>
 <body>
-    <p>test</p>
-    <p>test2</p>
-    <p>test3</p>
-    <p>Kenneth Var her</p>
+
+    <div class="threeXthree center">
+        <div class="box" id="r1c1" onclick="klikk('r1c1', 'r1c2', 'r2c1')"></div>
+        <div class="box" id="r1c2" onclick="klikk('r1c2', 'r1c1', 'r2c2', 'r1c3')"></div>
+        <div class="box" id="r1c3" onclick="klikk('r1c3', 'r1c2', 'r1c4', 'r2c3')"></div>
+        <div class="box" id="r1c4" onclick="klikk('r1c4', 'r1c3', 'r1c5', 'r2c4')"></div>
+        <div class="box" id="r1c5" onclick="klikk('r1c5', 'r1c4', 'r2c5')"></div>
+
+        <div class="box" id="r2c1" onclick="klikk('r2c1', 'r1c1','r2c2','r3c1')"></div>
+        <div class="box" id="r2c2" onclick="klikk('r2c2', 'r1c2','r2c1','r2c3','r3c2')"></div>
+        <div class="box" id="r2c3" onclick="klikk('r2c3', 'r1c3','r2c2','r2c4','r3c3')"></div>
+        <div class="box" id="r2c4" onclick="klikk('r2c4', 'r1c4','r2c3','r2c5','r3c4')"></div>
+        <div class="box" id="r2c5" onclick="klikk('r2c5', 'r1c5','r2c4','r3c5')"></div>
+
+        <div class="box" id="r3c1" onclick="klikk('r3c1', 'r2c1', 'r3c2', 'r4c1')"></div>
+        <div class="box" id="r3c2" onclick="klikk('r3c2', 'r2c2', 'r3c1', 'r4c2', 'r3c3')"></div>
+        <div class="box" id="r3c3" onclick="klikk('r3c3', 'r3c2', 'r2c3', 'r3c4', 'r4c3')"></div>
+        <div class="box" id="r3c4" onclick="klikk('r3c4', 'r3c3', 'r2c4', 'r3c5', 'r4c4')"></div>
+        <div class="box" id="r3c5" onclick="klikk('r3c5', 'r3c4', 'r2c5', 'r5c5')"></div>
+
+        <div class="box" id="r4c1" onclick="klikk('r4c1', 'r4c2', 'r5c1', 'r3c1')"></div>
+        <div class="box" id="r4c2" onclick="klikk('r4c2', 'r4c1', 'r4c3', 'r5c2', 'r3c2')"></div>
+        <div class="box" id="r4c3" onclick="klikk('r4c3', 'r4c2', 'r4c4', 'r5c3', 'r3c3')"></div>
+        <div class="box" id="r4c4" onclick="klikk('r4c4', 'r5c5', 'r3c4', 'r4c5', 'r4c3')"></div>
+        <div class="box" id="r4c5" onclick="klikk('r4c5', 'r5c5', 'r3c5', 'r4c4')"></div>
+
+        <div class="box" id="r5c1" onclick="klikk('r5c1', 'r5c2', 'r4c1')"></div>
+        <div class="box" id="r5c2" onclick="klikk('r5c2', 'r5c1', 'r5c3', 'r4c2')"></div>
+        <div class="box" id="r5c3" onclick="klikk('r5c3', 'r5c2', 'r5c4', 'r4c3')"></div>
+        <div class="box" id="r5c4" onclick="klikk('r5c4', 'r5c5', 'r5c3', 'r4c4')"></div>
+        <div class="box" id="r5c5" onclick="klikk('r5c5', 'r4c5', 'r5c4')"></div>
+    </div>
 </body>
 </html>
