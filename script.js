@@ -1,57 +1,41 @@
-function klikk(b1,b2,b3,b4){
-    onOff(document.getElementById(b1));
-    onOff(document.getElementById(b2));
-    onOff(document.getElementById(b3));
-    onOff(document.getElementById(b4));
-}
+const rc = [    'r1c1','r1c2','r1c3','r1c4','r1c5',
+                'r2c1','r2c2','r2c3','r2c4','r2c5',
+                'r3c1','r3c2','r3c3','r3c4','r3c5',
+                'r4c1','r4c2','r4c3','r4c4','r4c5',
+                'r5c1','r5c2','r5c3','r5c4','r5c5']
 
+const lys = [   0,0,0,0,0,
+                0,0,0,0,0,
+                0,0,0,0,0,
+                0,0,0,0,0,
+                0,0,0,0,0]
 
-var r1c1=0;
-var r1c2=0;
-var r1c3=0;
-var r1c4=0;
-var r1c5=0;
-
-var r2c1=0;
-var r2c2=0;
-var r2c3=0;
-var r2c4=0;
-var r2c5=0;
-
-var r3c1=0;
-var r3c2=0;
-var r3c3=0;
-var r3c4=0;
-var r3c5=0;
-
-var r4c1=0;
-var r4c2=0;
-var r4c3=0;
-var r4c4=0;
-var r4c5=0;
-
-var r5c1=0;
-var r5c2=0;
-var r5c3=0;
-var r5c4=0;
-var r5c5=0;
-function onOff(x){
-    //Hvis den ikke er lys, gjør den lys
-    if (let == 0){
-        document.getElementById(x).style.backgroundColor ="rgb(100,100,100)";
-        let x=1;
+function klikk(liste) {
+    for (a in liste){
+        onOff(liste[a]);
     }
-    //Hvis den er lys så gjør den mørk A
+    testVictory();
+
+
+
+}
+function onOff(x) {
+    if (lys[x]==0){
+        document.getElementById(rc[x]).style.backgroundColor ="rgb(100,100,100)";
+        lys[x]=1;
+    }
     else {
-        document.getElementById(x).style.backgroundColor ="rgb(50,50,50)";
-        x=0;
+        document.getElementById(rc[x]).style.backgroundColor ="rgb(50,50,50)";
+        lys[x]=0;
     }
 }
-
-function farge(){
-    if (id='r1c1'){
-        onOff();
+function testVictory() {
+    l=0;
+    for (i in lys) {
+        l += lys[i];
+    }
+    if (l==25){
+        document.getElementById('victory').style.display="block";
+        document.getElementById('fivebyfive').style.backgroundColor ="rgb(100,100,100)";
     }
 }
-
-
