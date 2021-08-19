@@ -10,6 +10,7 @@ div.center{
 #fivebyfive{
     height:80vh;
     width:80vh;
+    position:absolute;
     display:grid;
     grid-template-areas:    'r1c1 r1c2 r1c3 r1c4 r1c5'
                             'r2c1 r2c2 r2c3 r2c4 r2c5'
@@ -20,29 +21,55 @@ div.center{
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 3px;
 }
+#threebythree{
+    height:80vh;
+    width:80vh;
+    position:absolute;
+    display:none;
+    grid-template-areas:    'r1k1 r1k2 r1k3'
+                            'r2k1 r2k2 r2k3'
+                            'r3k1 r3k2 r3k3';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px;
+}
 @media (max-aspect-ratio: 1/1){
-    div.fivebyfive{
+    #fivebyfive{
+        height:80vw;
+        width:80vw;
+    }
+    #threebythree{
         height:80vw;
         width:80vw;
     }
 }
 @media (max-height:600px){
-    div.fivebyfive{
+    #fivebyfive{
+        height:480px;
+        width:480px;
+    }
+    #threebythree{
         height:480px;
         width:480px;
     }
 }
 @media (max-width:600px){
-    div.fivebyfive{
+    #fivebyfive{
+        height:480px;
+        width:480px;
+    }
+    #threebythree{
         height:480px;
         width:480px;
     }
 }
 .box{
-    background-color:rgb(50,50,50);
+    background-color:rgb(255, 5, 5);
+    border: transparent;
+
 }
 .box:hover {
-    border: 1px solid gray;
+    opacity: 0.9;
 }
 #r1c1{
     grid-area:r1c1;
@@ -90,6 +117,85 @@ div.center{
     grid-area:r3c5;
 }
 #victory{
+    position:absolute;
     display:none;
-    font-size:100px;
+    font-size:8em;
+    padding: 40vh 10vw;
+}
+/* alle knapper, men egentlig bare reset */
+button{
+    position:absolute;
+    top: 95vh;
+    left: 45vw; 
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: rgb(50,50,50);
+    color: white;
+    width: 7.5em;
+    height: 3em;
+    font-family:sans-serif;
+    border: none;
+}
+/* 3x3/5x5 knapp */
+.switchBoard{
+    position:absolute;
+    top: 95vh;
+    left: 55vw; 
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: rgb(50,50,50);
+    color: white;
+    width: 7.5em;
+    height: 3em;
+    font-family:sans-serif;
+    border: none;
+}
+#btn1 {
+    display: block;
+}
+#btn2 {
+    display: none;
+}
+h3 {
+    position:absolute;
+    top: 0vh;
+    left: 50vw; 
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family:sans-serif;
+}
+h4 {
+    position:absolute;
+    top: 3vh;
+    left: 50vw; 
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family:sans-serif;
+}
+#r1k1{
+    grid-area: r1k1;
+}
+#r1k2{
+    grid-area: r1k2;
+}
+#r1k3{
+    grid-area: r1k3;
+}
+#r2k1{
+    grid-area: r2k1;
+}
+#r2k2{
+    grid-area: r2k2;
+}
+#r2k3 {
+    grid-area: r2k3;
+}
+#r3k1 {
+    grid-area: r3k1;
+}
+#r3k2 {
+    grid-area: r3k2;
+}
+#r3k3 {
+    grid-area: r3k3;
 }
