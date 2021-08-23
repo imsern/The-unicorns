@@ -1,0 +1,553 @@
+body{
+    background-color:rgb(30,30,30);
+}
+div.center{
+    position:absolute;
+    top: 50vh;
+    left: 50vw; 
+    transform: translate(-50%, -50%);
+}
+#fivebyfive{
+    height:80vh;
+    width:80vh;
+    position:absolute;
+    display: grid;
+    grid-template-areas:    'r1c1 r1c2 r1c3 r1c4 r1c5'
+                            'r2c1 r2c2 r2c3 r2c4 r2c5'
+                            'r3c1 r3c2 r3c3 r3c4 r3c5'
+                            'r4c1 r4c2 r4c3 r4c4 r4c5'
+                            'r5c1 r5c2 r5c3 r5c4 r5c5';
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 3px;
+    border: solid grey;
+}
+#fivebyfive :hover{
+    opacity: 0.7;
+}
+#fivebyfivedance{
+    height:80vh;
+    width:80vh;
+    position:absolute;
+    display:none;
+    grid-template-areas:    'r1d1 r1d2 r1d3 r1d4 r1d5'
+                            'r2d1 r2d2 r2d3 r2d4 r2d5'
+                            'r3d1 r3d2 r3d3 r3d4 r3d5'
+                            'r4d1 r4d2 r4d3 r4d4 r4d5'
+                            'r5d1 r5d2 r5d3 r5d4 r5d5';
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 3px;
+}
+#threebythree{
+    height:80vh;
+    width:80vh;
+    position:absolute;
+    display:none;
+    grid-template-areas:    'r1k1 r1k2 r1k3'
+                            'r2k1 r2k2 r2k3'
+                            'r3k1 r3k2 r3k3';
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px;
+    border: solid grey;
+}
+#threebythree :hover{
+    opacity: 0.7;
+}
+#threebythreedance{
+    height:80vh;
+    width:80vh;
+    position:absolute;
+    display:none;
+    grid-template-areas:    'r1l1 r1l2 r1l3'
+                            'r2l1 r2l2 r2l3'
+                            'r3l1 r3l2 r3l3';
+    grid-template-columns:   1fr 1fr 1fr;
+    grid-template-rows:      1fr 1fr 1fr;
+    gap: 3px;
+}
+/* ------------------------------ Three by three grid ------------------------------*/
+#r1k1{
+    grid-area: r1k1;
+    background-color:rgb(255, 5, 5)
+}
+#r1k2{
+    grid-area: r1k2;
+    background-color:rgb(255, 5, 5)
+}
+#r1k3{
+    grid-area: r1k3;
+    background-color:rgb(255, 5, 5)
+}
+#r2k1{
+    grid-area: r2k1;
+    background-color:rgb(255, 5, 5)
+}
+#r2k2{
+    grid-area: r2k2;
+    background-color:rgb(255, 5, 5)
+}
+#r2k3 {
+    grid-area: r2k3;
+    background-color:rgb(255, 5, 5)
+}
+#r3k1 {
+    grid-area: r3k1;
+    background-color:rgb(255, 5, 5)
+}
+#r3k2 {
+    grid-area: r3k2;
+    background-color:rgb(255, 5, 5)
+}
+#r3k3 {
+    grid-area: r3k3;
+    background-color:rgb(255, 5, 5)
+}
+/* ------------------------------Three by three dance grid ------------------------------*/
+#r1l1{
+    grid-area:r1l1;
+    animation: colorfull;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+ #r1l2{
+    grid-area:r1l2;
+    animation: colorfull;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+ } 
+ #r1l3{
+    grid-area:r1l3;
+    animation: colorfull;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+ }
+#r2l1{
+    grid-area:r2l1;
+    animation: colorfull;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+} 
+#r2l2{
+    grid-area:r2l2;
+    animation: colorfull;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+} 
+#r2l3{
+    grid-area:r2l3;
+    animation: colorfull;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+#r3l1{
+    grid-area:r3l1;
+    animation: colorfull;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+} 
+#r3l2{
+    grid-area:r3l2;
+    animation: colorfull;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+#r3l3{
+    grid-area:r3l3;
+        animation: colorfull;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+/* ------------------------------Five by Five grid------------------------------- */
+#r1c1{
+    grid-area:r1c1;
+    background-color:rgb(255, 5, 5)  
+}
+#r1c2{
+    grid-area:r1c2;
+    background-color:rgb(255, 5, 5)
+}
+#r1c3{
+    grid-area:r1c3;
+    background-color:rgb(255, 5, 5)
+}
+#r1c4{
+    grid-area:r1c4;
+    background-color:rgb(255, 5, 5)
+}
+#r1c5{
+    grid-area:r1c5;
+    background-color:rgb(255, 5, 5)
+}
+#r2c1{
+    grid-area:r2c1;
+    background-color:rgb(255, 5, 5)
+}
+#r2c2{
+    grid-area:r2c2;
+    background-color:rgb(255, 5, 5)
+}
+#r2c3{
+    grid-area:r2c3;
+    background-color:rgb(255, 5, 5)
+}
+#r2c4{
+    grid-area:r2c4;
+    background-color:rgb(255, 5, 5)
+}
+#r2c5{
+    grid-area:r2c5;
+    background-color:rgb(255, 5, 5)
+}
+#r3c1{
+    grid-area:r3c1;
+    background-color:rgb(255, 5, 5)
+}
+#r3c2{
+    grid-area:r3c2;
+    background-color:rgb(255, 5, 5)
+}
+#r3c3{
+    grid-area:r3c3;
+    background-color:rgb(255, 5, 5)
+}
+#r3c4{
+    grid-area:r3c4;
+    background-color:rgb(255, 5, 5)
+}
+#r3c5{
+    grid-area:r3c5;
+    background-color:rgb(255, 5, 5)
+}
+#r4c1{
+    grid-area:r4c1;
+    background-color:rgb(255, 5, 5)
+}
+#r4c2{
+    grid-area:r4c2;
+    background-color:rgb(255, 5, 5)
+}
+#r4c3{
+    grid-area:r4c3;
+    background-color:rgb(255, 5, 5)
+}
+#r4c4{
+    grid-area:r4c4;
+    background-color:rgb(255, 5, 5)
+}
+#r4c5{
+    grid-area:r4c5;
+    background-color:rgb(255, 5, 5)
+}
+#r5c1{
+    grid-area:r5c1;
+    background-color:rgb(255, 5, 5)
+}
+#r5c2{
+    grid-area:r5c2;
+    background-color:rgb(255, 5, 5)
+}
+#r5c3{
+    grid-area:r5c3;
+    background-color:rgb(255, 5, 5)
+}
+#r5c4{
+    grid-area:r5c4;
+    background-color:rgb(255, 5, 5)
+}
+#r5c5{
+    grid-area:r5c5;
+    background-color:rgb(255, 5, 5)
+}
+/* ------------------------------Five by Five Dance------------------------------ */
+#r1d1{
+    grid-area:r1d1;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r1d2{
+    grid-area:r1d2;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r1d3{
+    grid-area:r1d3;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r1d4{
+    grid-area:r1d4;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r1d5{
+    grid-area:r1d5;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r2d1{
+    grid-area:r2d1;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r2d2{
+    grid-area:r2d2;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r2d3{
+    grid-area:r2d3;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r2d4{
+    grid-area:r2d4;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r2d5{
+    grid-area:r2d5;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r3d1{
+    grid-area:r3d1;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r3d2{
+    grid-area:r3d2;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r3d3{
+    grid-area:r3d3;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r3d4{
+    grid-area:r3d4;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r3d5{
+    grid-area:r3d5;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r4d1{
+    grid-area:r4d1;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r4d2{
+    grid-area:r4d2;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r4d3{
+    grid-area:r4d3;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r4d4{
+    grid-area:r4d4;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r4d5{
+    grid-area:r4d5;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r5d1{
+    grid-area:r5d1;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r5d2{
+    grid-area:r5d2;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r5d3{
+    grid-area:r5d3;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r5d4{
+    grid-area:r5d4;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+#r5d5{
+    grid-area:r5d5;
+    animation: colorfull;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+/* ------------------------------Victory event------------------------------ */
+#victory{
+    font-size: 60px;
+    display: none;
+}
+#victory h1{
+        position: relative;
+        -webkit-text-stroke: 1.5px black;
+        font-family: sans; color: white;
+        top: -250px;
+        text-align: center;
+        animation: pulsate 7s;
+        animation-iteration-count: infinite;
+}
+#victory h2{
+        position: relative;
+        text-align: center;
+        -webkit-text-stroke: 1.5px black;
+        font-family: sans; color: white;
+        top: 220px;
+        animation: pulsate 7s;
+        animation-iteration-count: infinite;
+}
+/* ------------------------------Animasjoner------------------------------ */
+@keyframes colorfull{
+    0%      {background-color: rgb(255, 5, 5);}
+    10%     {background-color: orange;}
+    20%     {background-color: yellow;}
+    30%     {background-color: green;}
+    40%     {background-color: blue;}
+    50%     {background-color: cornflowerblue;}
+    60%     {background-color: purple;}
+    70%     {background-color: blueviolet;}
+    80%     {background-color: darkslateblue;}
+    90%     {background-color: firebrick}
+    100%    {background-color: red;}
+
+}
+@keyframes pulsate {
+    0% { 
+        transform: scale(1); 
+    }
+    25% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* ------------------------------alle knapper, men egentlig bare reset------------------------------ */
+button{
+    position:absolute;
+    top: 95vh;
+    left: 45vw; 
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: rgb(50,50,50);
+    color: white;
+    width: 7.5em;
+    height: 3em;
+    font-family:sans-serif;
+    border: none;
+}
+/* ------------------------------3x3/5x5 knapp------------------------------ */
+.switchBoard{
+    position:absolute;
+    top: 95vh;
+    left: 55vw; 
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: rgb(50,50,50);
+    color: white;
+    width: 7.5em;
+    height: 3em;
+    font-family:sans-serif;
+    border: none;
+    animation: heartbeat;
+    
+}
+#btn1 {
+    display: block;
+}
+#btn2 {
+    display: none;
+}
+h3 {
+    position:absolute;
+    top: 0vh;
+    left: 50vw; 
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family:sans-serif;
+}
+h4 {
+    position:absolute;
+    top: 3vh;
+    left: 50vw; 
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family:sans-serif;
+}
+/* ------------------------------ @ media mindre skjerm ------------------------------ */ 
+@media (max-aspect-ratio: 1/1){
+    #fivebyfive{
+        height:80vw;
+        width:80vw;
+    }
+    #threebythree{
+        height:80vw;
+        width:80vw;
+    }
+}
+@media (max-height:600px){
+    #fivebyfive{
+        height:480px;
+        width:480px;
+    }
+    #threebythree{
+        height:480px;
+        width:480px;
+    }
+}
+@media (max-width:600px){
+    #fivebyfive{
+        height:480px;
+        width:480px;
+    }
+    #threebythree{
+        height:480px;
+        width:480px;
+    }
+}
