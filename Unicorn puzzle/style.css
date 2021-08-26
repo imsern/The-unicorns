@@ -1,5 +1,4 @@
 body {
-    position: relative;
     background: radial-gradient(circle, rgba(211,211,211,1) 36%, rgba(169,169,169,1) 84%);
     background-repeat: no-repeat;
     height: 100vh;
@@ -10,27 +9,39 @@ body {
 
 .rutenett {
     display: grid;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%);
+    border: 1px solid white;
+    background-color: dimgray;
+}
+.brett{
+    top:10px;
+    width:508px;
+    height:508px;
     grid-template-areas:    'x x x x'
                             'x x x x'
                             'x x x x'
                             'x x x x';
-    width:510px;
-    height:510px;
-    gap: 1px;
-    float:left;
-    margin-right: 5px;
-    background-color: dimgray;
+}
+.brikker{
+    top:560px;
+    width:1016px;
+    height:254px;
+    grid-template-areas:    'x x x x x x x x'
+                            'x x x x x x x x';
 }
 .item {
-    
     border: 1px solid white;
     width: 125px;
     height: 125px;
+    text-align:center;
+    font-size:60px;
+    line-height:125px;
 } 
 .item:hover{
-    opacity: 0.5;
+    border-color:red;
 }
-.valgtbrikke{
-    color:red;
-    background-color: lightyellow;
+.valgtBrikke{
+    border-color:red;
 }
