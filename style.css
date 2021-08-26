@@ -9,6 +9,8 @@ body {
 .header {
     background-color: red;
     grid-area: header;
+    min-width: 350px;
+    width: 100%;
 }
 .main{
         display: grid;
@@ -18,10 +20,12 @@ body {
         background-color: blue;
         padding: 1em;
         grid-area: main;
+        min-width: 350px;
 }
 .container {
         height: 100vh;
         width: 100vw;
+        min-width: 350px;
         display: grid;
         grid-template-columns: 25vw 50vw 25vw;
         grid-template-rows: 7vh 89vh 4vh;
@@ -105,6 +109,8 @@ body {
 .footer {
         background-color: yellow;
         grid-area: footer;
+        min-width: 350px;
+        width: 100%;
 }
 
         
