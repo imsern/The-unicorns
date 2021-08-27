@@ -12,11 +12,6 @@ var brikkeID='';
 
 function fyllBrikker(){
     for (i in brikker){
-        document.getElementById(brikker[i]).innerHTML=tilfeldigeBildeNr[i];
-        var navnpåbilde = tilfeldigeBildeNr[i]+'.png';
-         document.getElementById(brikker[i]).innerHTML=`
-         <img src="/images/Pieces/${navnpåbilde}" alt="brikke">
-         `;
         // document.getElementById(brikker[i]).innerHTML=tilfeldigeBildeNr[i];
         var navnpåbilde = tilfeldigeBildeNr[i]+'.png';
         document.getElementById(brikker[i]).innerHTML=`
@@ -58,9 +53,6 @@ function tilfeldiggjørBildeNr() {
 function testVinn(){
     var antallRiktige=0;
     for (i in brett){
-        var bildeHTML = riktigeBildeNr[i];
-        var bildeNavn = riktigeBildeNr[i]+'.png';
-        var bildeHTML=`<img src="/images/Pieces/${bildeNavn}" alt="brikke">`;
         // var bildeHTML = riktigeBildeNr[i];
         var bildeNavn = riktigeBildeNr[i]+'.png';
         var bildeHTML=`<img src="Images/Pieces/${bildeNavn}" alt="brikke">`;
