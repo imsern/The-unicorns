@@ -13,7 +13,7 @@ var brikkeID='';
 function fyllBrikker(){
     for (i in brikker){
         // document.getElementById(brikker[i]).innerHTML=tilfeldigeBildeNr[i];
-        var bildeNavn = tilfeldigeBildeNr[i]+'.png';
+        var bildeNavn = tilfeldigeBildeNr[i]+'.jpg';
         document.getElementById(brikker[i]).innerHTML='<img src="Images/Pieces/'+bildeNavn+'" alt="brikke">';
     }
 }
@@ -52,7 +52,7 @@ function testVinn(){
     var antallRiktige=0;
     for (i in brett){
         // var bildeHTML = riktigeBildeNr[i];
-        var bildeNavn = riktigeBildeNr[i]+'.png';
+        var bildeNavn = riktigeBildeNr[i]+'.jpg';
         var bildeHTML='<img src="Images/Pieces/'+bildeNavn+'" alt="brikke">';
         var ruteHTML = document.getElementById(brett[i]).innerHTML;
         if (ruteHTML==bildeHTML) antallRiktige++;
