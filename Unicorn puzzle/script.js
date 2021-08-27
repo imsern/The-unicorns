@@ -15,7 +15,7 @@ function fyllBrikker(){
         // document.getElementById(brikker[i]).innerHTML=tilfeldigeBildeNr[i];
         var navnpåbilde = tilfeldigeBildeNr[i]+'.png';
         document.getElementById(brikker[i]).innerHTML=`
-        <img src="/Images/Pieces/${navnpåbilde}" alt="brikke">
+        <img src="Images/Pieces/${navnpåbilde}" alt="brikke">
         `;
     }
 }
@@ -55,7 +55,7 @@ function testVinn(){
     for (i in brett){
         // var bildeHTML = riktigeBildeNr[i];
         var bildeNavn = riktigeBildeNr[i]+'.png';
-        var bildeHTML=`<img src="/Images/Pieces/${bildeNavn}" alt="brikke">`;
+        var bildeHTML=`<img src="Images/Pieces/${bildeNavn}" alt="brikke">`;
         var ruteHTML = document.getElementById(brett[i]).innerHTML;
         if (ruteHTML==bildeHTML) antallRiktige++;
     }
