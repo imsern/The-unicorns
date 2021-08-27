@@ -6,7 +6,9 @@ body {
     margin: 0;
     padding: 0;
 }
-.header {
+
+/* // GRID LØSNING, FUNGERER IKKE OPTIMALT */
+/* .header {
     background-color: red;
     grid-area: header;
     min-width: 350px;
@@ -40,7 +42,7 @@ body {
         background-size: contain;
 }
 /* LEGG TIL BILDE I DISSE */
-.prosjekt1 {
+/* .prosjekt1 {
         grid-column: 1;
         grid-row: 1;
         background-image: url(/lightsoutBilde.png);
@@ -111,6 +113,34 @@ body {
         grid-area: footer;
         min-width: 350px;
         width: 100%;
-}
+} */ 
 
+
+/* // FLEX LØSNING */
+
+.center {
+        justify-content: center;
+        justify-self: center;
+        justify-items: center;
+        align-self: center;
+        align-content: center;
+        align-items: center;
+}
+.container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         
+}
+.header {
+        background-color: red;
+        height: 10vh;
+}
+.maincontainer {
+        background-color: blue;
+        height: 85vh;
+}
+.footer {
+        background-color: green;
+        height: 5vh;
+}        
