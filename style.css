@@ -47,16 +47,25 @@ header {
         min-width: 20em;
         /* max-width: 20em; */
         justify-content: center;
+
+        cursor: pointer;
 }
 h2 {
         text-align: center;
-        color: white;      
+        color: white;
+            
 }
 .item:hover {
         border: 0.1em solid transparent;
         border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
         border-image-slice: 1;
 }
+hr {
+        border: 0.1em solid transparent;
+        border-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(214, 214, 214, 0.267),rgba(255, 255, 255, 0));
+        border-image-slice: 1;
+}
+
 
 /* @media (min-width: "value")
 flex-basis: 50%; */
