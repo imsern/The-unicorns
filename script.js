@@ -8,5 +8,7 @@ function nextPage(element, oppgave) {
     else if (oppgave == 2) {
         location.href='https://imsern.github.io/The-unicorns/Unicorn%20puzzle/';
     }
-    console.log(element);
+    else if (oppgave == 0) {
+        location.href='https://imsern.github.io/The-unicorns/';
+    }
 }

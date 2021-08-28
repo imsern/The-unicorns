@@ -5,23 +5,42 @@ html {
     width: 100vw;
     margin: 0;
     padding: 0;
-}
+    scroll-behavior: smooth;
+    background-attachment: fixed;
 
+
+}
+body {
+        position: absolute;
+        background-image: url(dp\ tacos.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+}
 
 
 /* // FLEX LØSNING */
 header {
-        height: 10vh;
+        height: 1.5em;
         width: 90vw;
+        max-height: 1.5em;
         background-color: rgba(0, 0, 0, 0.185);
+
         border: 0.01em solid transparent;
         border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
         border-image-slice: 1;
+
         margin-left: 5vw;
         padding-top: 2.5vh;
+
         text-align: center;
         font-size: 3em;
         color: white;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
 }
 .container {
         height: 85vh;
@@ -37,15 +56,16 @@ header {
         align-items: flex-start;
 }
 .container > * {
-        background-color: rgba(39, 39, 39, 0.219);
+        background-color: rgba(39, 39, 39, 0.61);
+        margin-top: 1vh;
+
         border: 0.1em solid rgba(77, 77, 77, 0.815);
         border-radius: 10px;
+        
+        
         flex: 0 1 20em;
-        margin-top: 1vh;
-        /* max-height: 12em; */
         min-height: 12em;
         min-width: 20em;
-        /* max-width: 20em; */
         justify-content: center;
 
         cursor: pointer;
