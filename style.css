@@ -14,7 +14,7 @@ header {
         height: 10vh;
         width: 90vw;
         background-color: rgba(0, 0, 0, 0.185);
-        border: 0.1em solid transparent;
+        border: 0.01em solid transparent;
         border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
         border-image-slice: 1;
         margin-left: 5vw;
