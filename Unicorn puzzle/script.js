@@ -20,8 +20,12 @@ function fyllBrikker(){
     }
 }
 function klikk(denne){
-    if (denne.innerHTML!='') velgbrikke(denne);
-    else limInn(denne);
+    if (denne.innerHTML!=''){
+        velgbrikke(denne);
+    }
+    else{ 
+        limInn(denne);
+    }
 }
 
 function velgbrikke(brikke){
@@ -59,11 +63,17 @@ function testVinn(){
         var ruteHTML = document.getElementById(brett[i]).innerHTML;
         if (ruteHTML==bildeHTML) antallRiktige++;
     }
-    if (antallRiktige==brett.length) alert('Gratulerer!')
+    if (antallRiktige==brett.length){
+         alert('Gratulerer!')
+         document.getElementById('victory').style.visibility = "visible"
+    }
 }
 function byttPuslespill(){
-    if (bildeSti=='Pieces') bildeSti='Pieces3';
-    else if (bildeSti=='Pieces3') bildeSti='Pieces';
+    if (bildeSti=='Pieces'){ 
+        bildeSti='Pieces3';
+        document.getElementById('victory').style.display = "none"
+
+    }else if (bildeSti=='Pieces3') bildeSti='Pieces';
     for (i in brett){
         document.getElementById(brett[i]).innerHTML='';
         document.getElementById(brikker[i]).innerHTML='';
