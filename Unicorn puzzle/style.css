@@ -73,7 +73,7 @@ body {
 }
 #victory{
     
-    /*visibility: hidden;*/
+    visibility: hidden;
     display: block;
     position: absolute;
     left: 705px;
