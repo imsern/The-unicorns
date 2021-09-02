@@ -8,11 +8,13 @@ html {
     scroll-behavior: smooth;
     background-attachment: fixed;
 }
+            /* Header / Banner */
 header {
     height: 1.5em;
     width: 90vw;
     max-height: 1.5em;
     background-color: rgba(0, 0, 0, 0.185);
+    cursor: pointer;
 
     border: 0.01em solid transparent;
     border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
@@ -29,4 +31,130 @@ header {
     flex-direction: row;
     justify-content: center;
     align-content: center;
+}
+            /* Venstre Ordliste knapper panel */
+.Kontrollpanel{
+    height: 50vh;
+    width: 14%;
+    background-color: rgba(0, 0, 0, 0.185);
+
+    border: 0.01em solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+
+    margin-left: 5vw;
+
+    text-align: center;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.Kontrollpanel>*{
+    flex: 1 1 190px;
+
+}
+
+            /* Venstre Ordliste knapp */
+.wordBtn{
+    overflow: hidden;
+    cursor: pointer;
+    height: 15%;
+    width: 100%;
+    
+    line-height: 67px;
+    font-size: 1.4em;
+    color: white;
+    
+    border: 0.0001em solid rgba(0, 0, 0, 0.185);
+}
+
+ 
+
+                        /* Reset og Back panel */
+.Kontrollpanel2{
+    height: 7vh;
+    width: 13.9vw;
+    background-color: rgba(0, 0, 0, 0.185);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+
+    border: 0.01em solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+
+    margin-left: 5vw;
+    padding-top: 2vh;
+    margin-top: 1vh;
+
+    text-align: center;
+    color: white;
+}
+
+
+                        /* Høyre Ordliste panel */
+.kontrollpanel3{
+    position: absolute;
+    height: 50vh;
+    width: 14%;
+    background-color: rgba(0, 0, 0, 0.185);
+
+    border: 0.01em solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+
+    margin-left: 81.1vw;
+    margin-top: -60.9vh ;
+
+    
+    color: white;
+    line-height: 165%;
+
+    
+
+}
+              /* Reset og Back Knapp */
+.resetBtn{
+    height: 50px;
+    width: 135px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -5px;
+
+    border: 0.01em solid;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+
+    text-align: middle;
+    font-size: 1.6em;
+    line-height: 48px;
+    color: white;
+}
+
+.resetBtn:hover{
+    cursor: pointer;
+}
+
+                          /* Endetekst display */
+.endText{
+    height: 40vh;
+    width: 88.4vw;
+    margin-left: 5vw;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.185);
+
+    border: 0.01em solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+}
+.endText > *{
+    font-size:2em;
+    color: white;
 }

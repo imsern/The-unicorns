@@ -11,4 +11,7 @@ function nextPage(element, oppgave) {
     else if (oppgave == 0) {
         location.href='https://imsern.github.io/The-unicorns/';
     }
+    else if (oppgave == 3) {
+        location.href='https://imsern.github.io/The-unicorns/WordChooser';
+    }
 }
