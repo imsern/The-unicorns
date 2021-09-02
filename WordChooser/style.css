@@ -1,0 +1,32 @@
+html {
+    background: radial-gradient(gray 20%, rgb(59, 59, 59) 80%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+}
+header {
+    height: 1.5em;
+    width: 90vw;
+    max-height: 1.5em;
+    background-color: rgba(0, 0, 0, 0.185);
+
+    border: 0.01em solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+
+    margin-left: 5vw;
+    padding-top: 2.5vh;
+
+    text-align: center;
+    font-size: 3em;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
