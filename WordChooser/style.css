@@ -1,4 +1,5 @@
 html {
+    position: absolute;
     background: radial-gradient(gray 20%, rgb(59, 59, 59) 80%);
     background-repeat: no-repeat;
     height: 100vh;
@@ -10,9 +11,10 @@ html {
 }
             /* Header / Banner */
 header {
-    height: 1.5em;
+    position:absolute;
+    overflow:hidden;
+    height: 10vh;
     width: 90vw;
-    max-height: 1.5em;
     background-color: rgba(0, 0, 0, 0.185);
     cursor: pointer;
 
@@ -20,29 +22,26 @@ header {
     border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
     border-image-slice: 1;
 
-    margin-left: 5vw;
-    padding-top: 2.5vh;
+    left: 5.3vw;
 
+    line-height: 95px;
     text-align: center;
     font-size: 3em;
     color: white;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
 }
             /* Venstre Ordliste knapper panel */
 .Kontrollpanel{
-    height: 50vh;
-    width: 14%;
+    position:absolute;
+    height: 500px;
+    width: 180px;
     background-color: rgba(0, 0, 0, 0.185);
 
     border: 0.01em solid transparent;
     border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
     border-image-slice: 1;
 
-    margin-left: 5vw;
+    top: 15vh;
+    left: 5.3vw;
 
     text-align: center;
     color: white;
@@ -67,7 +66,9 @@ header {
     line-height: 67px;
     font-size: 1.4em;
     color: white;
-    
+
+    background-color: rgba(0, 0, 0, 0.185);
+
     border: 0.0001em solid rgba(0, 0, 0, 0.185);
 }
 
@@ -75,69 +76,69 @@ header {
 
                         /* Reset og Back panel */
 .Kontrollpanel2{
-    height: 7vh;
-    width: 13.9vw;
+    position: fixed;
+    height: 70px;
+    width: 180px;
     background-color: rgba(0, 0, 0, 0.185);
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
 
 
     border: 0.01em solid transparent;
     border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
     border-image-slice: 1;
 
-    margin-left: 5vw;
-    padding-top: 2vh;
-    margin-top: 1vh;
+    top: 70vh;
+    left: 5.3vw;
+
+    display: flex;
+    flex-direction: row;
+
 
     text-align: center;
     color: white;
 }
 
 
+
                         /* Høyre Ordliste panel */
 .kontrollpanel3{
-    position: absolute;
-    height: 50vh;
-    width: 14%;
+    position:absolute;
+    overflow: hidden;
+    height: 500px;
+    width: 180px;
     background-color: rgba(0, 0, 0, 0.185);
 
     border: 0.01em solid transparent;
     border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
     border-image-slice: 1;
 
-    margin-left: 81.1vw;
-    margin-top: -60.9vh ;
-
-    
+    top: 15vh;
+    right: 4.5vw;
     color: white;
-    line-height: 165%;
-
+    line-height: 27px;
     
-
 }
+
               /* Reset og Back Knapp */
 .resetBtn{
     height: 50px;
-    width: 135px;
+    width: 70px;
 
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: -5px;
+    margin-left: 12px;
+    margin-top: 8px;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: rgba(0, 0, 0, 0.185);
 
     border: 0.01em solid;
     border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
     border-image-slice: 1;
 
-    text-align: middle;
-    font-size: 1.6em;
-    line-height: 48px;
+    line-height: 45px;
+    justify-content: center;
     color: white;
 }
-
 .resetBtn:hover{
     cursor: pointer;
 }
@@ -145,10 +146,12 @@ header {
                           /* Endetekst display */
 .endText{
     height: 40vh;
-    width: 88.4vw;
+    width: 90vw;
     margin-left: 5vw;
-    padding: 1em;
+    margin-top: 10vh;
     background-color: rgba(0, 0, 0, 0.185);
+
+    text-align: center;
 
     border: 0.01em solid transparent;
     border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
