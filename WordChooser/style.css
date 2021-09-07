@@ -9,6 +9,7 @@ html {
     scroll-behavior: smooth;
     background-attachment: fixed;
 }
+body{margin:0}
             /* Header / Banner */
 header {
     position:absolute;
@@ -18,22 +19,23 @@ header {
     background-color: rgba(0, 0, 0, 0.185);
     cursor: pointer;
 
-    border: 0.01em solid transparent;
+    border: 0.01em solid;
     border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
     border-image-slice: 1;
 
-    left: 5.3vw;
+    left: 5vw;
 
-    line-height: 95px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 3em;
     color: white;
 }
             /* Venstre Ordliste knapper panel */
 .Kontrollpanel{
     position:absolute;
-    height: 500px;
-    width: 180px;
+    height: 54vh;
+    width: 215px;
     background-color: rgba(0, 0, 0, 0.185);
 
     border: 0.01em solid transparent;
@@ -41,7 +43,7 @@ header {
     border-image-slice: 1;
 
     top: 15vh;
-    left: 5.3vw;
+    left: 5vw;
 
     text-align: center;
     color: white;
@@ -62,8 +64,11 @@ header {
     cursor: pointer;
     height: 15%;
     width: 100%;
-    
-    line-height: 67px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
     font-size: 1.4em;
     color: white;
 
@@ -76,9 +81,9 @@ header {
 
                         /* Reset og Back panel */
 .Kontrollpanel2{
-    position: fixed;
-    height: 70px;
-    width: 180px;
+    position: absolute;
+    height: 8vh;
+    width: 215px;
     background-color: rgba(0, 0, 0, 0.185);
 
 
@@ -87,7 +92,7 @@ header {
     border-image-slice: 1;
 
     top: 70vh;
-    left: 5.3vw;
+    left: 5vw;
 
     display: flex;
     flex-direction: row;
@@ -102,9 +107,9 @@ header {
                         /* Høyre Ordliste panel */
 .kontrollpanel3{
     position:absolute;
-    overflow: hidden;
-    height: 500px;
-    width: 180px;
+    overflow: auto;
+    height: 63vh;
+    width: 215px;
     background-color: rgba(0, 0, 0, 0.185);
 
     border: 0.01em solid transparent;
@@ -112,19 +117,21 @@ header {
     border-image-slice: 1;
 
     top: 15vh;
-    right: 4.5vw;
+    right: 5vw;
     color: white;
-    line-height: 27px;
-    
+}
+li{
+    line-height: 32px;
+    font-size:1.2em;
 }
 
               /* Reset og Back Knapp */
 .resetBtn{
-    height: 50px;
-    width: 70px;
+    height: 5vh;
+    width: 87px;
 
     margin-left: 12px;
-    margin-top: 8px;
+    margin-top: 1.5vh;
 
     display: flex;
     flex-direction: row;
@@ -135,8 +142,9 @@ header {
     border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
     border-image-slice: 1;
 
-    line-height: 45px;
     justify-content: center;
+    align-items: center;
+    font-size:1.4em;
     color: white;
 }
 .resetBtn:hover{
@@ -145,7 +153,6 @@ header {
 
                           /* Endetekst display */
 .endText{
-    height: 40vh;
     width: 90vw;
     margin-left: 5vw;
     margin-top: 10vh;
