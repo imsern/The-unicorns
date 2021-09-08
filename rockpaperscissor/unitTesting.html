@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.17.0.css">
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="controller.js"></script>
+
+  <script src="https://code.jquery.com/qunit/qunit-2.17.0.js"></script>
+
+
+  <script> 
+  let pChoice = '';
+
+  function show(){}
+
+        QUnit.test('Pick Rock', function(assert) {
+            pChoice = 'rock';
+            chooseAction('rock');
+        assert.equal(pChoice, 'rock');
+      });
+      QUnit.test('Pick Paper', function(assert) {
+        pChoice = 'paper';
+        chooseAction('paper');
+        assert.equal(pChoice, 'paper');
+      });
+      QUnit.test('Pick Scissor', function(assert) {
+        pChoice = 'scissor';
+        chooseAction('scissor');
+        assert.equal(pChoice, 'scissor');
+      });
+  </script>
+</body>
