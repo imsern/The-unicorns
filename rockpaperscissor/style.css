@@ -17,12 +17,9 @@ header {
     border-image-slice: 1;
     cursor: pointer;
     margin-left: 5vw;
-
     font-size: 3em;
     color: white;
-
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-content: center;
 }
@@ -38,7 +35,12 @@ header {
 .row *{
     display: flex;
     justify-content: center;
+    
 }
 .pickBtn{
     cursor: pointer;
+}
+#infoRow{
+    font-size:2em;
+    align-content: center;
 }

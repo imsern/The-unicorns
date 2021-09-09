@@ -12,9 +12,9 @@ function updateView(){
         <button id="resetBtn" onclick="window.location.reload()">Reset</button>
         <a href="unitTesting.html"><button id="qUnitBtn">QUnit</button></a>
         <div class="row">
-            <div id="playerScoreCount"><b>${score[0]}</b></div>
-            <div id="roundCounter"><b>${currentRound}</b></div>
-            <div id="aiScoreCount"><b>${score[1]}</b></div><br>
+            <div id="infoRow"><b>${score[0]}</b></div>
+            <div id="infoRow"><b>${currentRound}</b></div>
+            <div id="infoRow"><b>${score[1]}</b></div><br>
         </div><br />
         <div class="row">
             <div class="pickBtn" onclick="compareChoices(0)">Rock</div>
