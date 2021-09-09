@@ -1,9 +1,7 @@
-function compareChoices(){}
-
-function chooseAction(buttonId, value){
-    if (value == 'rock') {pChoice = 'rock';}
-    if (value == 'paper') {pChoice = 'paper';}
-    if (value == 'scissor') {pChoice = 'scissor';}
-    console.log(value);
+function chooseAction(value){
+    if (value == 'Rock'){return 'Rock'}
+    if (value == 'Paper'){return 'Paper'}
+    if (value == 'Scissor'){return 'Scissor'}
+    compareChoices();
     show();
 }
