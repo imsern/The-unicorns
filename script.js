@@ -14,4 +14,7 @@ function nextPage(element, oppgave) {
     else if (oppgave == 3) {
         location.href='https://imsern.github.io/The-unicorns/WordChooser';
     }
+    else if (oppgave == 4) {
+        location.href='https://imsern.github.io/The-unicorns/rockpaperscissor';
+    }
 }
