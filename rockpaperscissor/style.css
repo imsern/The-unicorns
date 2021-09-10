@@ -18,18 +18,19 @@ header {
     border-image-slice: 1;
     cursor: pointer;
     margin-left: 5vw;
-    font-size: 3em;
-    color: white;
+    font-size: 2.8em;
+    color: rgb(222, 222, 222);
     display: flex;
     justify-content: center;
     align-content: center;
     font-family: Arial, Helvetica, sans-serif;
+    margin-bottom:.2em;
 }
 
-.resetBtn{
+.resetBtn {
     position:absolute;
     left:50%;
-    top:70vh;
+    top:90vh;
     transform:translate(-150%);
     background-color: rgba(0, 0, 0, 0.185);
     color: white;
@@ -39,65 +40,61 @@ header {
     cursor: pointer;
     height:5vh;
     width:12vh;
+    min-height:1.25em;
+    min-width:3em;
     font-size:1.2em;
+    padding:0;
 }
-.qunit{
+.qunit {
     transform:translate(+50%);
 }
 
-.row{
+.row {
+    padding:0;
+    margin:0;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%);
     width: 50vw;
-    height: 75px;
+    min-width:26em;
     display: grid;
     grid-template-areas: 'x x x';
-    grid-template-rows: '1fr 1fr 1fr';
-    align-content: center;
-}
-.row *{
-    display: flex;
-    justify-content: center;
-    
 }
 .choices{
-    position:absolute;
-    top:35vh;
+    top:60vh;
+    min-width:20em;
+    width: 40vw;
 }
-.left{
-    left:35%;
-}
-.center{
-    left:50%;
-}
-.right{
-    left:65%;
-}
-.pickBtn{
-    position:absolute;
-    top:35vh;
+.pickBtn {
     cursor: pointer;
-    width:25vw;
-    height:20vw;
-    max-height:10em;
-    max-width:10em;
-    transform:translate(-50%);
-    border-radius: 50%;
-}
-#infoRow{
-    font-size:1.4em;
-    margin: 0 .7em; 
-    transform:translate(-37%);
-}
-.middleEarth{
-    position:absolute;
-    left: 30%;
-}
-.result{
-    position: absolute;
-    top:25vh;
+    position:relative;
     left:50%;
-    text-align: center;
+    transform:translate(-50%);
+    width:12vw;
+    height:12vw;
+    min-width:6em;
+    min-height:6em;
+    
+}
+#infoRow {
+    width:10vw;
+    min-width:4.1em;
+    text-align:center;
+    position:relative;
+    left:50%;
     transform:translate(-50%);
 
+    font-size:1.7em;
+}
+.result {
+    top:30vh;
+    position:absolute;
+    left: 50%;
+    min-width:20em;
+    transform:translate(-50%);
+    text-align: center;
+    font-size:1.8em;
+    line-height:2em;
 }
 
 a {

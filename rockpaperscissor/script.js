@@ -1,8 +1,8 @@
 //model
 let currentRound = 0;
 let resultat = '';
-const score= [0,0];
-const wordIndex = ['Rock', 'Paper', 'Scissors'];
+const score= [0,0]
+const wordIndex = ['Rock', 'Paper', 'Scissors']
 
 //view
 updateView();
@@ -11,25 +11,25 @@ function updateView(){
     html+=`
         <button class="resetBtn" onclick="window.location.reload()">Reset</button>
         <a href="unitTesting.html"><button class="resetBtn qunit">QUnit</button></a>
-        <div class="row middleEarth">
-            <div id="infoRow">Player ${score[0]}</div>
-            <div id="infoRow">Round:${currentRound}</div>
-            <div id="infoRow">AI: ${score[1]}</div><br>
-        </div><br />
-        <img class="pickBtn left"   onclick="compareChoices(0)" src="Icons/Rock.png"     width="128px" height="128px">
-        <img class="pickBtn center" onclick="compareChoices(1)" src="Icons/Paper.png"    width="128px" height="128px">
-        <img class="pickBtn right"  onclick="compareChoices(2)" src="Icons/Scissors.png" width="128px" height="128px">
-        <div class="result middleEarth">${resultat}</div>
-        
+        <div class="row">
+            <div id="infoRow">Player: <b>${score[0]}</b></div>
+            <div id="infoRow">Round: <b>${currentRound}</b></div>
+            <div id="infoRow">AI: <b>${score[1]}</b></div>
+        </div>
+        <div class="row choices">
+            <img class="pickBtn" onclick="compareChoices(0)" src="Icons/Rock.png">
+            <img class="pickBtn" onclick="compareChoices(1)" src="Icons/Paper.png">
+            <img class="pickBtn" onclick="compareChoices(2)" src="Icons/Scissors.png">
+        </div>
+        <div class="result">${resultat}</div>
     `;
-
     document.getElementById('app').innerHTML=html;
 }
 
 //controller
 function compareChoices(playerChoice){
     let aiChoice = Math.floor(Math.random()*wordIndex.length);
-    resultat = `You played ${wordIndex[playerChoice]} - AI played ${wordIndex[aiChoice]}.<br><br>`;
+    resultat = `You played <b>${wordIndex[playerChoice]}</b>. <br> AI played <b>${wordIndex[aiChoice]}</b>.<br>`;
     if (playerChoice > 0 && playerChoice == (aiChoice+1) ||  playerChoice == 0 && aiChoice == 2){
         resultat += `<b>You won!</b>`;
         score[0]++;
@@ -55,6 +55,3 @@ function checkWin(){
     }
     else return;
 }
-
-
-
