@@ -14,14 +14,15 @@ function compareChoices(playerChoice){
     checkWin();
 }
 
+
 function checkWin(){
     if (score[0] >= 3){
-        alert("Player wins!");
-        window.location.reload();
+        return 'You won';
+        
     } 
     else if (score[1] >= 3){
-        alert ("AI wins!");
-        window.location.reload();
+        return 'AI won'
+        
     }
     else return;
 }

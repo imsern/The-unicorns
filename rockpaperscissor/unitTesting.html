@@ -25,53 +25,38 @@
       let actual = wordIndex[0];
       let expected = 'Rock';
       assert.equal(actual, expected, `${wordIndex[0]} is equal to ${expected}`);
-      assert.notEqual('hump', 'lump');
-      assert.notEqual('man', 'woman');
     });
 
-    // QUnit.test('Pick Paper', function (assert) {
-    //   let actual = compareChoices('Paper');
-    //   let expected = 'Paper';
-    //   assert.equal(actual, expected);
-    // });
+    QUnit.test('Check player choice', function (assert) {
+      compareChoices(1);
+      let actual = wordIndex[1];
+      let expected = 'Paper';
+      assert.equal(actual, expected, `${wordIndex[1]} is equal to ${expected}`);
+    });
 
-    // QUnit.test('Pick Scissors', function (assert) {
-    //   let actual = compareChoices('Scissors');
-    //   let expected = 'Scissors';
-    //   assert.equal(actual, expected);
-    // });
+    QUnit.test('Check player choice', function (assert) {
+      compareChoices(2);
+      let actual = wordIndex[2];
+      let expected = 'Scissors';
+      assert.equal(actual, expected, `${wordIndex[2]} is equal to ${expected}`);
+    });
 
-
-    // QUnit.test('Computer won', function (assert) {
-    //   let actual = compareChoices('Scissor');
-    //   let expected = 'Scissor';
-    //   assert.equal(actual, expected);
-    // });
-
-    // QUnit.test('ai score increase', function (assert) {
-    //   let actual = compareChoices('Scissor');
-    //   let expected = 'Scissor';
-    //   assert.equal(actual, expected);
-    // });
-
-    // QUnit.test('Player won', function (assert) {
-    //   let actual = compareChoices('Scissor');
-    //   let expected = 'Scissor';
-    //   assert.equal(actual, expected);
-    // });
-
-    // QUnit.test('player score increase', function (assert) {
-    //   let actual = compareChoices('Scissor');
-    //   let expected = 'Scissor';
-    //   assert.equal(actual, expected);
-    // });
+    QUnit.test('check Player win', function (assert) {
+      score[0] = 3;
+      score[1] = 0;
+      let actual = checkWin();
+      let expected = 'You won';
+      assert.equal(actual, expected);
+    });
+    QUnit.test('check AI win', function (assert) {
+      score[0] = 0;
+      score[1] = 3;
+      let actual = checkWin();
+      let expected = 'AI won';
+      assert.equal(actual, expected);
+    });
 
 
-    // QUnit.test('round increase', function (assert) {
-    //   let actual = compareChoices('Scissor');
-    //   let expected = 'Scissor';
-    //   assert.equal(actual, expected);
-    // });
 
   </script>
 </body>
