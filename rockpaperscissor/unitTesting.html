@@ -15,48 +15,76 @@
   <script>
     let currentRound = 0;
     let resultat = '';
-    const score = [0, 0]
+    let aiChoice;
+    let score;
     const wordIndex = ['Rock', 'Paper', 'Scissors']
-    
+
     function updateview() { }
 
-    QUnit.test('Check player choice', function (assert) {
-      compareChoices(0);
-      let actual = wordIndex[0];
-      let expected = 'Rock';
-      assert.equal(actual, expected, `${wordIndex[0]} is equal to ${expected}`);
+
+    
+        QUnit.test('Loop going through all the outcomes', function (assert) {
+          for (let i = 0; i <= 2; i++) {
+            for (let z = 0; z <= 2; z++) {
+              aiChoice=z;
+              score = [0, 0];
+              currentRound = 0;
+              compareChoices(i);
+              let sum = score[0] + score[1];
+                if (i == aiChoice) {
+                  assert.equal(sum, 0, `Player choice = ${wordIndex[i]} - AI choice = ${wordIndex[aiChoice]} - current round: ${currentRound} - ${score}`);
+                } else {
+                  assert.equal(sum, 1, `Player choice = ${wordIndex[i]} - AI choice = ${wordIndex[aiChoice]} - current round: ${currentRound} - ${score}`);
+                }
+              }
+            }
+        });
+    QUnit.module('Result messages', hooks => {
+      QUnit.test('Rock vs Paper', function (assert) {
+        score = [0, 0];
+        let playerChoice = 0;
+        aiChoice = 1;
+        compareChoices(0);
+        let actual = resultat;
+        let expected = `You played ${wordIndex[playerChoice]} - AI played ${wordIndex[aiChoice]}. AI won!`;
+        assert.equal(actual, expected, `Expected: ${expected} - Actual: ${actual}`);
+      });
+      QUnit.test('Paper vs Rock', function (assert) {
+        score = [0, 0];
+        let playerChoice = 1;
+        aiChoice = 0;
+        compareChoices(1);
+        let actual = resultat;
+        let expected = `You played ${wordIndex[playerChoice]} - AI played ${wordIndex[aiChoice]}. You won!`;
+        assert.equal(actual, expected, `Expected: ${expected} - Actual: ${actual}`);
+      });
+      QUnit.test('Paper vs Paper', function (assert) {
+        score = [0, 0];
+        let playerChoice = 1;
+        aiChoice = 1;
+        compareChoices(1);
+        let actual = resultat;
+        let expected = `You played ${wordIndex[playerChoice]} - AI played ${wordIndex[aiChoice]}. Draw!`;
+        assert.equal(actual, expected, `Expected: ${expected} - Actual: ${actual}`);
+      });
     });
-
-    QUnit.test('Check player choice', function (assert) {
-      compareChoices(1);
-      let actual = wordIndex[1];
-      let expected = 'Paper';
-      assert.equal(actual, expected, `${wordIndex[1]} is equal to ${expected}`);
+    QUnit.module('Win event', hooks => {
+      QUnit.test('check Player win', function (assert) {
+        score = [0, 0];
+        score[0] = 3;
+        score[1] = 0;
+        let actual = checkWin();
+        let expected = 'You won';
+        assert.equal(actual, expected);
+      });
+      QUnit.test('check AI win', function (assert) {
+        score = [0, 0];
+        score[0] = 0;
+        score[1] = 3;
+        let actual = checkWin();
+        let expected = 'AI won';
+        assert.equal(actual, expected);
+      });
     });
-
-    QUnit.test('Check player choice', function (assert) {
-      compareChoices(2);
-      let actual = wordIndex[2];
-      let expected = 'Scissors';
-      assert.equal(actual, expected, `${wordIndex[2]} is equal to ${expected}`);
-    });
-
-    QUnit.test('check Player win', function (assert) {
-      score[0] = 3;
-      score[1] = 0;
-      let actual = checkWin();
-      let expected = 'You won';
-      assert.equal(actual, expected);
-    });
-    QUnit.test('check AI win', function (assert) {
-      score[0] = 0;
-      score[1] = 3;
-      let actual = checkWin();
-      let expected = 'AI won';
-      assert.equal(actual, expected);
-    });
-
-
-
   </script>
 </body>
