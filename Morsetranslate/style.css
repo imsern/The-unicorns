@@ -1,0 +1,76 @@
+body {
+    background: radial-gradient(gray 20%, rgb(59, 59, 59) 80%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+}
+header {
+    height: 8vh;
+    width: 90vw;
+    min-height: 1.3em;
+    background-color: rgba(0, 0, 0, 0.185);
+    padding-top:1vh;
+    border: 0.01em solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    cursor: pointer;
+    margin-left: 5vw;
+    font-size: 2.8em;
+    color: rgb(222, 222, 222);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom:.2em;
+}
+
+a{
+    text-decoration: none;
+}
+.inputDiv, .outputDiv{
+    position:absolute;
+    left:50%;
+    transform: translate(-50%);
+    margin-top: 1%;
+}
+
+.inputDiv{
+    width: 596px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.212);
+    border: 0.01em solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+}
+.outputDiv{
+    margin-top: 30px;
+    width: 600px;
+    min-height: 300px;
+    background-color: rgba(0, 0, 0, 0.212);
+    border: 0.01em solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.outputDiv > * {
+margin: 20px 20px 20px 20px;
+}
+
+.playBtn{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position:relative;
+    right:-52%;
+    background-image: url(Images/play-button.svg);
+    background-repeat: no-repeat;
+}

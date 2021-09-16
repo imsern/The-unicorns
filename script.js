@@ -17,4 +17,7 @@ function nextPage(element, oppgave) {
     else if (oppgave == 4) {
         location.href='https://imsern.github.io/The-unicorns/rockpaperscissor';
     }
+    else if (oppgave == 5) {
+        location.href='https://imsern.github.io/The-unicorns/Morsetranslate';
+    }
 }
