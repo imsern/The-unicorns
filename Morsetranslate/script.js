@@ -11,7 +11,11 @@ model = {
 
     inputField: "",
 
-}
+    short: new Audio("SFX/Shortv2.mp3"),
+    long: new Audio("SFX/Longv2.mp3"),
+};
+// model.short.playbackRate = 0.4;
+// model.long.playbackRate = 0.15;
 
 
 
@@ -36,23 +40,22 @@ function show(){
 function txtToMorse(txt) {
     model.inputField = txt;
     let newTxt='';
-    let txtArray = txt.split("");
+    let txtArray = txt.toLowerCase().split("");
     for (letter of txtArray) {
             let morseIndex=model.alfabetArray.indexOf(letter);
-            newTxt +=model.morseArray[morseIndex];
+            newTxt +=model.morseArray[morseIndex] + ' ';
     }
     model.morseText = newTxt;
     show();
 }
-
 function play() {
-    var audio = new Audio("SFX/Short.mp3");
-    audio.play();
+    let splitMorse = model.morseText.split("");
+    for (let i=0; i<splitMorse.length; i++) {
+        if (splitMorse[i] == ".") setTimeout(function() {model.short.play()},400*i);
+        if (splitMorse[i] == "-") setTimeout(function() {model.long.play()},400*i);
+        setTimeout(function() {console.log(i)},400*i);
+    }
 }
 
-// if (typeof txt === 'string' || txt instanceof String){
-//     //its a string
-//     else{
-//         //ikke en string
-//     }
-// }
+
+
