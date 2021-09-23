@@ -6,66 +6,120 @@
 
 
 model={
+    winLossMessage:"",
+    disabled: false,
     player: {
-        name:"invincibleFantastico",
+        name:"You",
         hp: 100,
         basePower:0.8,
         criticalChance:0.1,
+        attackMessage:"",
         attacks: [
-            {name: 'Light Attack', damage: 10},
-            {name: 'Dash n slash', damage: 20},
-            {name: 'Flash the Bash', damage: 30},
-            {name: 'Ataque Ultimo', damage: 40},
+            {name: 'Call Trump', damage: 10},
+            {name: 'Pimp slap', damage: 20},
+            {name: 'Fuck off 9000', damage: 30},
+            {name: 'Dick kick', damage: 40},
         ]
     },
     opponent: {
-        name:"computador",
+        name:"Bobama",
         hp: 100,
         basePower:1,
         chanceToMiss:0.1,
+        attackMessage:"",
         attacks:[
-            {name: '', damage: 10},
-            {name: '', damage: 20},
-            {name: '', damage: 30},
-            {name: '', damage: 40},
+            {name: 'Communism', damage: 10},
+            {name: 'Obama Care', damage: 20},
+            {name: 'Presidential Love Tap', damage: 30},
+            {name: 'No tears only dreams', damage: 40},
+            //Forslag til navn:
+            //Sterilize
+            //Manhandle his ham candle
+            //Arbitrary deprivation of life
+            //Carrot and stick
+            //Delete
+            //Dick kick
+            //Tear off his right arm and beat him to death with the bloody stump
+            //Rest him in peace
+            //End his oxygen habit
         ]
     },
 }
 
 function show(){
-    let html=`
-        <div class="player">
-        <progress id="playerHP" class="hpBar" value="${model.player.hp}" max ="100"></progress>
-        <label for="playerHP">${model.opponent.hp}</label>
-            <div class="attackContainer">`;
-    for (i in model.player.attacks){
-        html +=`
-            <div class="attackBtn" onclick="playerAttack(${i})">${model.player.attacks[i].name}</div>
-            `;
-        }
-               
-    html += `</div></div>
+    let html =`
         <div class="opponent">
-            <img src="https://i.imgur.com/eR0fu10.png">
-            <progress id="opponentHP" class="hpBar" value="${model.opponent.hp}" max ="100"></progress><label for="opponentHP">${model.opponent.hp}</label>
-            
-        </div>
-    `;
+            <h1 class="attackMessage playerM">${model.opponent.attackMessage}</h1>
+            <img class="bImg" src="/bossfight/Bobama.gif" alt="Dis is boss">
+            <progress id="opponentHP" class="hpBar bossBar" value="${model.opponent.hp}" max ="100"></progress>
+            <label for="opponentHP">${model.opponent.hp}</label>
+        </div>`;
+        
+    html +=`
+        <h1 class="winLossMessage">${model.winLossMessage}</h1>
+        <div class="player">
+            <img class="pImg" src="/bossfight/Player2.gif" alt="Dis is player">
+            <progress id="playerHP" class="hpBar playerBar" value="${model.player.hp}" max ="100"></progress>
+            <label for="playerHP">${model.player.hp}</label>
     
+            <div class="attackContainer">`;
+            for (i in model.player.attacks){
+                html +=`<div class="attackBtn" onclick="playerAttack(${i})">${model.player.attacks[i].name}</div>`;
+            }
+    html +=`
+            </div>
+            <h1 class="attackMessage">${model.player.attackMessage}</h1>
+        </div>`;
+                   
     document.getElementById('app').innerHTML = html;
 }
 
 
 
 function playerAttack(i){
-    let player=model.player;
-    let attack=player.attack[i];
-    let criticalDamageFactor=Math.random()<player.criticalChance ? 2 : 1;
-    let damage=player.basepower*attack.damage*criticalDamageFactor;
+    if (model.disabled){return}
+    else{
+        model.disabled = true;
+        
+        let player=model.player;
+        let opponent=model.opponent;
+        opponent.attackMessage='';
+
+        let attack=player.attacks[i];
+        let criticalDamageFactor=(Math.random()<player.criticalChance) ? 2 : 1;
+        let damage=player.basePower*attack.damage*criticalDamageFactor;
+
+        opponent.hp -= damage;
+        if (opponent.hp<=0){
+            opponent.hp=0;
+            model.winLossMessage="Game Won!";
+        } else {
+            setTimeout(() => {
+                opponentAttack(Math.floor(Math.random()*opponent.attacks.length));
+            }, Math.floor(Math.random() * 4000));
+        //     opponentAttack(Math.floor(Math.random()*opponent.attacks.length));
+        }
+        player.attackMessage=`<i>${player.name}</i> used <i>${attack.name}</i> and dealt <i>${damage}</i> damage.`;
+        show();
+    }
 }
 function opponentAttack(i){
+    let player=model.player;
     let opponent=model.opponent;
-    let attack=opponent.attack[i];
-    let chanceToMissFactor=Math.random()<opponent.chanceToMiss ? 0 : 1;
-    let damage=opponent.basepower*attack.damage*chanceToMissFactor;
+
+    let attack=opponent.attacks[i];
+    let chanceToMissFactor=(Math.random()<opponent.chanceToMiss) ? 0 : 1;
+    let damage=opponent.basePower*attack.damage*chanceToMissFactor;
+
+    player.hp -= damage;
+    if (player.hp<=0){
+        player.hp=0;
+        model.winLossMessage="Game Over!";
+        model.disabled = true;
+    }
+    else {
+        model.disabled = false;
+    }
+    opponent.attackMessage=`<i>${opponent.name}</i> used <i>${attack.name}</i> and dealt <i>${damage}</i> damage.`;
+    show();
 }

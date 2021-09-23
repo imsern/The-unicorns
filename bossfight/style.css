@@ -35,11 +35,14 @@ header {
 }
 
 .attackBtn{
-    cursor:pointer;
+    cursor: pointer;
     display: inline-block;
     height: 50px;
-    width: 100px;
-    background-color: red;
+    width: 150px;
+    color: rgba(253, 253, 253, 0.623);
+    font-size: 1.3em;
+    background-color: rgba(59, 59, 59, 0.548);
+    border: 1px solid rgba(112, 112, 112, 0.534);
     text-align: center;
 }
 
@@ -50,4 +53,38 @@ header {
 label {
     font-size: 20px;
     color: white;
+}
+.bImg{
+    height: 200px;
+    width: 200px;
+    vertical-align: middle;
+}
+.pImg{
+    height: 200px;
+    width: 200px;
+}
+
+.attackMessage {height:70px;width:50vw;min-width:500px;}
+.winLossMessage {height:50px;color:rgb(216, 174, 68)}
+
+.winLossMessage{
+    font-size: 2.6em;
+    margin-top: -50px;
+    margin-left: 280px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.445);
+}
+#app {
+    position:absolute;
+    left:50%;
+    transform:translate(-50%);
+    width:50vw;
+    min-width:660px;
+}
+
+.opponent{
+    margin-bottom: 100px;
+}
+
+.attackBtn:hover{
+    border: 1px solid rgba(230, 230, 230, 0.801);
 }
