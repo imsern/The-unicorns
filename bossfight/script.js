@@ -56,7 +56,7 @@ function show(){
     let html =`
         <div class="opponent">
             <h1 class="attackMessage playerM">${model.opponent.attackMessage}</h1>
-            <img class="bImg" src="/bossfight/Bobama.gif" alt="Dis is boss">
+            <img class="bImg" src="Bobama.gif" alt="Dis is boss">
             <progress id="opponentHP" class="hpBar bossBar" value="${model.opponent.hp}" max ="100"></progress>
             <label for="opponentHP">${model.opponent.hp}</label>
         </div>`;
@@ -64,7 +64,7 @@ function show(){
     html +=`
         <h1 class="winLossMessage">${model.winLossMessage}</h1>
         <div class="player">
-            <img class="pImg" src="/bossfight/Player2.gif" alt="Dis is player">
+            <img class="pImg" src="Player2.gif" alt="Dis is player">
             <progress id="playerHP" class="hpBar playerBar" value="${model.player.hp}" max ="100"></progress>
             <label for="playerHP">${model.player.hp}</label>
     
