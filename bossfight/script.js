@@ -15,10 +15,10 @@ model={
         criticalChance:0.1,
         attackMessage:"",
         attacks: [
-            {name: 'Call Trump', damage: 10},
-            {name: 'Pimp slap', damage: 20},
-            {name: 'Fuck off 9000', damage: 30},
-            {name: 'Dick kick', damage: 40},
+            {name: 'Quick Attack', damage: 10},
+            {name: 'Tackle', damage: 20},
+            {name: 'Slash', damage: 30},
+            {name: 'Call Trump', damage: 40},
         ]
     },
     opponent: {
@@ -28,10 +28,10 @@ model={
         chanceToMiss:0.1,
         attackMessage:"",
         attacks:[
-            {name: 'Communism', damage: 10},
-            {name: 'Obama Care', damage: 20},
-            {name: 'Presidential Love Tap', damage: 30},
-            {name: 'No tears only dreams', damage: 40},
+            {name: 'Logical Argument', damage: 10},
+            {name: 'Bite', damage: 20},
+            {name: 'Power Trip', damage: 30},
+            {name: 'Obama Care', damage: 40},
             //Forslag til navn:
             //Sterilize
             //Manhandle his ham candle
@@ -42,6 +42,12 @@ model={
             //Tear off his right arm and beat him to death with the bloody stump
             //Rest him in peace
             //End his oxygen habit
+            //Pimp slap
+            //Fuck off 9000
+            //Communism
+            //Presidential Love Tap
+            //No tears only dreams
+            //https://pokemondb.net/move/all
         ]
     },
 }

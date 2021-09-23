@@ -20,4 +20,7 @@ function nextPage(element, oppgave) {
     else if (oppgave == 5) {
         location.href='https://imsern.github.io/The-unicorns/Morsetranslate';
     }
+    else if (oppgave == 6) {
+        location.href='https://imsern.github.io/The-unicorns/bossfight';
+    }
 }

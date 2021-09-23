@@ -43,7 +43,9 @@ header {
     font-size: 1.3em;
     background-color: rgba(59, 59, 59, 0.548);
     border: 1px solid rgba(112, 112, 112, 0.534);
-    text-align: center;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hpBar{
@@ -86,5 +88,5 @@ label {
 }
 
 .attackBtn:hover{
-    border: 1px solid rgba(230, 230, 230, 0.801);
+    border: 1px solid rgba(230, 230, 230, 0.401);
 }
